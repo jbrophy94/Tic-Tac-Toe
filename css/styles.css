@@ -1,0 +1,105 @@
+:root {
+  --dark-blue: rgb(30, 70, 228);
+  --light-blue: #51c1fe;
+  --faded-blue: rgb(191, 215, 250);
+  --yellow: gold;
+  --main-font: "Varela Round";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: var(--main-font);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--yellow);
+
+  padding: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 5px var(--faded-blue);
+
+  color: var(--faded-blue);
+}
+
+h1 {
+  margin-bottom: 5px;
+
+  font-size: 3rem;
+}
+
+.grid-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  width: 50%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 10px;
+  justify-content: center;
+
+  border: 1px solid var(--faded-blue);
+  border-radius: 15px;
+}
+
+.grid-item {
+  background-color: var(--light-blue);
+
+  border: 3px solid var(--yellow);
+  border-radius: 15px;
+
+  font-size: 4rem;
+  color: var(--faded-blue);
+
+  text-align: center;
+
+  aspect-ratio: 1;
+}
+
+.grid-item:hover {
+  background-color: var(--yellow);
+}
+
+.grid-item:active {
+  background-color: var(--faded-blue);
+  border-color: var(--light-blue);
+}
+
+.new-game-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-game {
+  width: 50%;
+  height: 50px;
+
+  border: 3px solid var(--faded-blue);
+  border-radius: 15px;
+  color: var(--faded-blue);
+  background-color: var(--light-blue);
+}
+
+.new-game:hover {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+}
+
+.new-game:active {
+  background-color: var(--faded-blue);
+  border-color: var(--yellow);
+}
