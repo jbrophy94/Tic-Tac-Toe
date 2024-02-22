@@ -3,7 +3,6 @@
 const h1 = document.querySelector("h1");
 const h3 = document.querySelector("h3");
 const grid = document.querySelector(".grid-container");
-const gridItems = document.querySelectorAll(".grid-item");
 
 function gameBoard() {
   const availableCells = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -168,6 +167,8 @@ function game() {
 const newGame = document.querySelector(".new-game");
 game();
 newGame.addEventListener("click", function () {
+  const gridItems = document.querySelectorAll(".grid-item");
+
   h1.textContent = "Tic Tac Toe";
   h3.textContent = "New Game Started. player1's move";
   gridItems.forEach(function (item) {
