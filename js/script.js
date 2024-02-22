@@ -1,5 +1,10 @@
 "use strict";
 
+const h1 = document.querySelector("h1");
+const h3 = document.querySelector("h3");
+const grid = document.querySelector(".grid-container");
+const gridItems = document.querySelectorAll(".grid-item");
+
 function gameBoard() {
   const availableCells = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let winningCombinations = [
@@ -123,11 +128,8 @@ function gameBoard() {
 }
 
 function game() {
-  let won = false;
   const board = gameBoard();
-  const h1 = document.querySelector("h1");
-  const h3 = document.querySelector("h3");
-  const grid = document.querySelector(".grid-container");
+  let won = false;
 
   grid.addEventListener("click", function (e) {
     h3.textContent = `${board.getActivePlayer().getName()}'s turn`;
@@ -140,7 +142,9 @@ function game() {
           board.getActivePlayer(),
           board.getAvailableCells()
         );
-        e.target.textContent = `${board.getActivePlayer().getMarker()}`;
+        e.target.querySelector("div").textContent = `${board
+          .getActivePlayer()
+          .getMarker()}`;
 
         if (
           board.checkWinner(
@@ -164,9 +168,8 @@ function game() {
 const newGame = document.querySelector(".new-game");
 game();
 newGame.addEventListener("click", function () {
-  document.querySelector("h1").textContent = "Tic Tac Toe";
-  document.querySelector("h3").textContent = "New Game Started. player1's move";
-  const gridItems = document.querySelectorAll(".grid-item");
+  h1.textContent = "Tic Tac Toe";
+  h3.textContent = "New Game Started. player1's move";
   gridItems.forEach(function (item) {
     item.textContent = "";
   });

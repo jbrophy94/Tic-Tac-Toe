@@ -58,12 +58,19 @@ h1 {
   border: 3px solid var(--yellow);
   border-radius: 15px;
 
-  font-size: 4rem;
   color: var(--faded-blue);
 
   text-align: center;
 
   aspect-ratio: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item div {
+  font-size: clamp(50px, 4rem, 100px);
 }
 
 .grid-item:hover {
