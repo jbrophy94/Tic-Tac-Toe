@@ -64,13 +64,11 @@ h1 {
 
   aspect-ratio: 1;
 
+  font-size: 100px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.grid-item div {
-  font-size: clamp(50px, 4rem, 100px);
 }
 
 .grid-item:hover {

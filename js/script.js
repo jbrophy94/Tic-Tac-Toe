@@ -141,9 +141,7 @@ function game() {
           board.getActivePlayer(),
           board.getAvailableCells()
         );
-        e.target.querySelector("div").textContent = `${board
-          .getActivePlayer()
-          .getMarker()}`;
+        e.target.textContent = `${board.getActivePlayer().getMarker()}`;
 
         if (
           board.checkWinner(
